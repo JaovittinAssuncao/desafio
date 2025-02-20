@@ -22,12 +22,13 @@ public class CaixaEletronico {
             if(acaoConta == 1) {
                  System.out.println("Quanto Você Deseja sacar?");
                 double saqueBruno = scanner.nextDouble();
-                if (saqueBruno - saldoBruno >= 0){
-                    System.out.println("Seu saque foi concluido com sucesso , você tem " + saldoBruno + " de saldo");
-                }
+                double saldoAtualSaque = saldoBruno - saqueBruno;
+                System.out.println("Seu saldo atual é " + saldoAtualSaque);
             }else if (acaoConta == 2) {
                 System.out.println("Quanto Você Deseja depositar?");
                 double depositoBruno = scanner.nextDouble();
+                double saldoAtualDeposito = saldoBruno + depositoBruno;
+                System.out.println("Seu saldo atual é " + saldoAtualDeposito);
 
             }else if (acaoConta == 3) {
                 System.out.println("Seu saldo atual é " + saldoBruno);
